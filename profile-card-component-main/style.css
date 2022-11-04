@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --primary-color: hsl(185, 75%, 39%);
+    --primary-color-dark: hsl(229, 23%, 23%);
+    --primary-color-light: hsl(227, 10%, 46%);
+    --neutral-color: hsl(0, 0%, 59%);
+    --neutral-color-opacity: hsla(0, 0%, 59%, 0.2);
+
+    --ff: "Kumbh Sans", sans-serif;
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --fs-p: 18px;
+
+    --spacer: 1rem;
+
+    --br: 15px;
+}
+
+body {
+    font-family: var(--ff);
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 42vh;
+}
+
+#container {
+    font-size: var(--fs-p);
+    display: flex;
+    align-items: center;
+}
+
+#wrapper {
+    max-width: 350px;
+    background: #fff;
+    border-radius: var(--br);
+    overflow: hidden;
+    margin: 12% auto;
+    text-align: center; 
+}
+
+.profile-card {
+    padding: var(--spacer);
+    display: flex;
+}
+
+.profile-card__cover {
+   --spacer: 0;
+}
+
+.profile-card__content {
+    display: block;
+}
+
+.profile-card__profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-top: -62px;
+}
+
+.profile-card__content h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.profile-card__profile-age{
+    padding-left: 10px;
+    color: var(--primary-color-light);
+    font-weight: var(--fw-normal);
+}
+
+.profile-card__content p {
+    padding-bottom: 20px;
+    color: var(--primary-color-light);
+}
+
+hr {
+    height: 1px;
+    background: var(--neutral-color-opacity);
+    border: none;
+}
+
+.profile-card__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px 50px 50px;
+    color: var(--primary-color-light);
+}
+
+.profile-card__stats {
+    font-weight: var(--fw-bold);
+    padding-bottom: 15px;
+    color: var(--primary-color-dark);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

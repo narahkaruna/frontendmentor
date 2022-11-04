@@ -6,6 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="./style.css">
+
   <title>Frontend Mentor | Profile card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,18 +17,38 @@
   </style>
 </head>
 <body>
-  Victor Crest
-  26
-  London
+  <div id="container">
+    <div id="wrapper">
+      <div class="profile-card profile-card__cover">
+        <img src="./images/bg-pattern-card.svg" alt="card cover background">
+      </div>
+  
+      <div class="profile-card profile-card__content">
+        <img class="profile-card__profile-photo" src="./images/image-victor.jpg" alt="Victor's photo">
+        <h3>Victor Crest<span class="profile-card__profile-age">26</span></h3>
+        <p>London</p>
+      </div>
 
-  80K
-  Followers
+      <hr>
+  
+      <div class="profile-card profile-card__footer">
+        <div>
+          <p class="profile-card__stats">80K</p>
+          <p>Followers</p>
+        </div>
+        <div>
+          <p class="profile-card__stats">803K</p>
+          <p>Likes</p>
+        </div>
+        <div>
+          <p class="profile-card__stats">1.4K</p>
+          <p>Photos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
-  803K
-  Likes
-
-  1.4K
-  Photos
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/narahkaruna">Narah Karuna</a>.
