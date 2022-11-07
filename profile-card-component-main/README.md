@@ -24,7 +24,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- [Solution] (https://github.com/narahkaruna/frontendmentor.io/tree/main/profile-card-component-main)
+- [Solution](https://github.com/narahkaruna/frontendmentor.io/tree/main/profile-card-component-main)
 - [Live Site](https://gentle-alpaca-951001.netlify.app/)
 
 ## My process
