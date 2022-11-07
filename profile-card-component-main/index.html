@@ -10,28 +10,23 @@
 
   <title>Frontend Mentor | Profile card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  <div id="container">
-    <div id="wrapper">
-      <div class="profile-card profile-card__cover">
+  <main id="container">
+    <article id="wrapper">
+      <header class="profile-card profile-card__cover">
         <img src="./images/bg-pattern-card.svg" alt="card cover background">
-      </div>
+      </header>
   
-      <div class="profile-card profile-card__content">
+      <section class="profile-card profile-card__content">
         <img class="profile-card__profile-photo" src="./images/image-victor.jpg" alt="Victor's photo">
-        <h3>Victor Crest<span class="profile-card__profile-age">26</span></h3>
+        <h2>Victor Crest<span class="profile-card__profile-age">26</span></h2>
         <p>London</p>
-      </div>
+      </section>
 
       <hr>
   
-      <div class="profile-card profile-card__footer">
+      <section class="profile-card profile-card__footer">
         <div>
           <p class="profile-card__stats">80K</p>
           <p>Followers</p>
@@ -44,14 +39,14 @@
           <p class="profile-card__stats">1.4K</p>
           <p>Photos</p>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
+    </article>
+  </main>
   
 
-  <div class="attribution">
+  <footer class="attribution" role="contentinfo">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/narahkaruna">Narah Karuna</a>.
-  </div>
+  </footer>
 </body>
 </html>
