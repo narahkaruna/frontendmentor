@@ -34,7 +34,6 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - HTML5
 - CSS3
 - Flexbox
-- CSS Grid
 
 ## Author
 
