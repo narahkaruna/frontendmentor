@@ -38,6 +38,10 @@ body {
     background-position: right 50vw bottom 50vh, left 50vw top 42vh;
 }
 
+.visually-hidden {
+    visibility: hidden;
+}
+
 #container {
     font-size: var(--fs-p);
     display: flex;
