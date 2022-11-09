@@ -30,7 +30,7 @@ html {
 }
 
 body {
-    background-image: url(/order-summary-component-main/images/pattern-background-mobile.svg);
+    background-image: url(/images/pattern-background-mobile.svg);
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -160,7 +160,7 @@ body {
 
 @media (max-width: 1455px) {
     body {
-        background-image: url(/order-summary-component-main/images/pattern-background-desktop.svg);
+        background-image: url(/images/pattern-background-desktop.svg);
         min-height: 105vh;
     }
 
