@@ -76,32 +76,26 @@ body {
 }
 
 .btn-div {
-    width: 50px;
-    height: 50px;
-    line-height: 60px;
-    background: var(--primary-clr-green);
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -40px;
-}
-
-.btn-div:hover {
-    box-shadow: 1px 1px 25px var(--primary-clr-green);
+    margin: 0 auto -40px;
 }
 
 #getAdvice {
     background: var(--primary-clr-green);
     border: none;
+    width: 50px;
+    height: 50px;
+    line-height: 64px;
+    border-radius: 50%;
 }
 
-.btn-div:hover,
 #getAdvice:hover {
     cursor: pointer;
+    box-shadow: 1px 1px 25px var(--primary-clr-green);
 }
 
-.btn-div img {
-    width: 100%;
+#getAdvice:active {
+    transform: scale(0.98);
+    box-shadow: 1px 2px 2px 1px var(--neutral-clr-dark);
 }
 
 .attribution { 
