@@ -1,0 +1,132 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-clr: hsl(184, 100%, 22%);
+    --primary-clr-vdark: hsl(179, 100%, 13%);
+    --primary-clr-orange: hsl(31, 77%, 52%);
+
+    --neutral-clr: hsl(0, 0%, 95%);
+    --neutral-clr-p: hsla(0, 0%, 100%, 0.75);
+
+    --fs: 15px;
+
+    --ff: 'Lexend Deca', sans-serif;
+    --fw: 400;
+
+    --ff-2: 'Big Shoulders Display', cursive;
+    --fw-2: 700;
+
+    --spacer: 1rem;
+    --spacer-m: calc(var(--spacer)* 2);
+    --spacer-lg: calc(var(--spacer) * 3);
+
+    --br: 10px;
+}
+
+body {
+    background: var(--neutral-clr);
+    font-family: var(--ff);
+    color: var(--neutral-clr-p);
+    min-height: 100vh;
+    font-size: var(--fs);
+}
+
+main {
+    max-width: 88%;
+    margin: 50% auto;
+    border-radius: var(--br);
+    overflow: hidden;
+}
+
+#wrapper_cars {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.cars {
+    height: 35vh;
+    padding: var(--spacer-lg) var(--spacer-lg) calc(var(--spacer) * 4);
+    line-height: 1em;
+}
+
+.cars__title {
+    padding-top: var(--spacer-lg);
+    text-transform: uppercase;
+    font-family: var(--ff-2);
+    font-weight: var(--fw-2);
+    font-size: calc(var(--fs) * 2.7);
+}
+
+.cars__content {
+    padding-top: var(--spacer-lg);
+    line-height: 1.5;
+}
+
+.cars__link {
+    width: 150px;
+    height: 50px;
+    background: var(--neutral-clr);
+    border-radius: calc(var(--br) * 3);
+    margin: var(--spacer-m) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cars__link:hover {
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--neutral-clr);
+}
+
+.cars__link a {
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.cars--sedans {
+    background: var(--primary-clr-orange);
+}
+
+.cars--sedans .cars__link a {
+    color: var(--primary-clr-orange);
+}
+
+.cars--suvs {
+    background: var(--primary-clr);
+}
+
+.cars--suvs .cars__link a {
+    color: var(--primary-clr);
+}
+
+.cars--luxury {
+    background: var(--primary-clr-vdark);
+}
+
+.cars--luxury .cars__link a {
+    color: var(--primary-clr-vdark);
+}
+
+.cars__link a:hover {
+    color: var(--neutral-clr);
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
