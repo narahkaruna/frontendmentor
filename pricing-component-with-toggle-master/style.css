@@ -28,9 +28,9 @@ html {
 
 body {
     background-color: var(--neutral-clr-vlight);
-    background-image: url(./images/bg-top.svg);
-    background-repeat: no-repeat;
-    background-position: left 50vw top -5vh;
+    background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 50vw top -5vh, right 50vw bottom -20vh;
     text-align: center;
     font-family: var(--ff);
     color: var(--neutral-clr);
@@ -38,13 +38,12 @@ body {
 }
 
 #wrapper {
-    display: grid;
     width: 90%;
     margin: 0 auto;
     padding: var(--spacer);
 }
 
-h2 {
+h1 {
     padding: var(--spacer-lg);
 }
 
@@ -60,7 +59,7 @@ h2 {
     transform: translate(0, 20%);
 }
 
-#toggle-switch {
+#toggle__switch {
     width: 50px;
     height: 32px;
     background: linear-gradient(to right, var(--primary-clr), var(--primary-clr-dark));
@@ -69,18 +68,27 @@ h2 {
     position: relative;
 }
 
-#toggle-slider {
+#toggle__switch:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+#toggle__slider {
     width: 24px;
     height: 24px;
     background: var(--neutral-clr-vlight);
     border-radius: 50%;
     position: absolute;
-    left: 4px;
     top: 4px;
+    bottom: 0;
 }
 
-#toggle-slider:active {
-    right: 4px;
+#toggle__slider.active {
+	right: 4px;
+}
+
+#toggle__slider:hover {
+    cursor: pointer;
 }
 
 .card {
@@ -88,15 +96,17 @@ h2 {
     background: #fff;
     border-radius: var(--br);
     margin-top: var(--spacer-m);
+    padding-bottom: var(--spacer);
     height: 50vh;
 }
 
 .card__title {
     padding: var(--spacer-m);
+    font-size: calc(var(--fs-p) * 1.2);
 }
 
 .card__plan {
-    font-size: calc(var(--fs-p)* 4.5);
+    font-size: calc(var(--fs-p)* 4.7);
     font-weight: var(--fw-b);
     color: var(--neutral-clr-dark);
     display: flex;
@@ -105,14 +115,13 @@ h2 {
     margin-bottom: var(--spacer);
 }
 
-.card__plan-monthly {
-    font-size: calc(var(--fs-p) * 5);
-    display: none;
+.card__plan-currency {
+    font-size: calc(var(--fs-p) * 2.5);
+    padding-right: 5px;   
 }
 
-.card__plan-dsymbol {
-    font-size: calc(var(--fs-p) * 3);
-    font-weight: var(--fw-b);    
+.card__plan-monthly {
+    display: none;
 }
 
 .card__detail {
@@ -145,6 +154,13 @@ h2 {
     color: var(--neutral-clr-vlight);
 }
 
+.card__link:hover {
+    background: var(--neutral-clr-vlight);
+    color: var(--primary-clr-dark);
+    border: 1px solid var(--primary-clr-dark);
+    cursor: pointer;
+}
+
 .card--important {
     background: linear-gradient(to right bottom, var(--primary-clr), var(--primary-clr-dark));
     color: var(--neutral-clr-vlight);
@@ -158,3 +174,80 @@ h2 {
 .card--important .card__plan {
     color: var(--neutral-clr-vlight);
 }
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 100px; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 700px) {
+    body {
+        background-position: left 75vw top -1vh, right 75vw top 68vh;
+    }
+
+    #wrapper {
+        margin: 0 auto;
+    }
+
+    .plan {
+        width: 35%;
+    }
+
+    #wrapper__card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 30vw;
+    }
+
+    .card:nth-child(1) {
+        border-radius: calc(var(--spacer)/2) 0 0 calc(var(--spacer)/2);
+    }
+
+    .card:nth-child(3) {
+        border-radius: 0 calc(var(--spacer)/2) calc(var(--spacer)/2) 0;
+    }
+
+    .card--important {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        margin-top: 10px;
+    }
+
+    .card__plan {
+        font-size: calc(var(--fs-p)* 3.5);
+    }
+
+    .card__link {
+        width: 20vw;
+    }
+}
+
+@media (min-width: 1440px){
+    #wrapper__card {
+        width: 70vw;
+    }
+
+    .plan {
+        width: 20%;
+    }
+
+    .card {
+        width: 25vw;
+        height: 45vh;
+    }
+
+    .card__plan {
+        font-size: calc(var(--fs-p)* 4.7);
+    }
+}
+
