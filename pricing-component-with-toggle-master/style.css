@@ -175,6 +175,10 @@ h1 {
     color: var(--neutral-clr-vlight);
 }
 
+/*.card--important .card__link:hover {
+
+}*/
+
 .attribution { 
     font-size: 11px; 
     text-align: center;

@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    height: 100%;
 }
 
 *, *::before, *::after {
@@ -34,28 +35,37 @@ body {
     background: var(--neutral-clr);
     font-family: var(--ff);
     color: var(--neutral-clr-p);
-    min-height: 100vh;
+    min-height: 100%;
     font-size: var(--fs);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
-    max-width: 88%;
-    margin: 50% auto;
-    border-radius: var(--br);
-    overflow: hidden;
+    max-width: 98%;
 }
 
-#wrapper_cars {
-    
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+.wrapper__cars {
+    margin: 20% auto;
+    height: 100vh;
 }
 
 .cars {
-    height: 35vh;
+    height: 350px;
     padding: var(--spacer-lg) var(--spacer-lg) calc(var(--spacer) * 4);
-    line-height: 1em;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.cars:nth-child(1){
+    border-radius: var(--spacer) var(--spacer) 0 0;
+}
+
+.cars:nth-child(3){
+    border-radius: 0 0 var(--spacer) var(--spacer);
 }
 
 .cars__title {
@@ -64,10 +74,11 @@ main {
     font-family: var(--ff-2);
     font-weight: var(--fw-2);
     font-size: calc(var(--fs) * 2.7);
+    line-height: 1.2em;
 }
 
 .cars__content {
-    padding-top: var(--spacer-lg);
+    padding-top: var(--spacer-m);
     line-height: 1.5;
 }
 
@@ -76,7 +87,8 @@ main {
     height: 50px;
     background: var(--neutral-clr);
     border-radius: calc(var(--br) * 3);
-    margin: var(--spacer-m) 0;
+    margin-top: var(--spacer-m);
+    margin-bottom: var(--spacer-lg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,12 +133,43 @@ main {
     color: var(--neutral-clr);
 }
 
-
 .attribution { 
     font-size: 11px; 
     text-align: center; 
+    margin-top: auto;
+    color: var(--primary-clr);
 }
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 768px) {
+
+    main {
+        width: 900px;
+    }
+
+    .wrapper__cars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .cars {
+        padding: var(--spacer-lg);
+        height: 370px;
+        width: 250px;
+    }
+
+    .cars:nth-child(1){
+        border-radius: var(--spacer) 0 0 var(--spacer);
+    }
+
+    .cars:nth-child(3){
+        border-radius: 0 var(--spacer) var(--spacer) 0;
+    }
 }
