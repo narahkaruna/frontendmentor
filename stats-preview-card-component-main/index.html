@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./styles.css">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+  <main id="container">
+    <div class="wrapper__card">
+      <div class="card__header">
+        <picture class="card__header-image">
+          <source media="(min-width: 743px)" srcset="./images/image-header-desktop.jpg">
+          <img src="./images/image-header-mobile.jpg" alt="header image">
+        </picture>
+      </div>
+      <div class="card__body">
+        <h2 class="card__body-title">Get <span class="card__body-title--highlight">insights</span> that help your business grow.</h2>
+        <p class="card__body-content">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+  experience, and overall efficiency.
+        </p>
+        <div class="card__stats">
+          <div class="card__stats-heading">10k+
+            <span class="card__stats-text">companies</span>
+          </div>
+          <div class="card__stats-heading">314
+            <span class="card__stats-text">templates</span>
+          </div>
+          <div class="card__stats-heading">12M+
+            <span class="card__stats-text">queries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Narah Karuna</a>.
+  </footer>
+</body>
+</html>
