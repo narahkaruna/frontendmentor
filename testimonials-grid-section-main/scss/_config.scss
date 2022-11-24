@@ -1,0 +1,29 @@
+ $primary-clr: hsl(217, 19%, 35%);
+ $primary-clr-dark: hsl(219, 29%, 14%);
+ $primary-clr-violet: hsl(263, 55%, 52%);
+ $text-color: hsl(0, 0%, 100%);
+
+ $neutral-clr: hsl(0, 0%, 81%);
+ $neutral-clr-dark: hsl(210, 46%, 95%);
+
+ $font-primary: 'Barlow Semi Condensed', sans-serif;
+
+ $fw-md: 500;
+ $fw-semi-bold: 600;
+
+ $fs-p: 0.8125rem;
+
+ $spacer: 1rem;
+ $spacer-md: calc($spacer * 2);
+ $spacer-lg: calc($spacer * 3);
+
+ $br: 10px;
+
+ @mixin media-768 {
+    @media (min-width: 48rem) {
+        @content;
+    }
+ }
+
+
+ 

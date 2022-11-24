@@ -1,0 +1,49 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  /*font-size: 62.95%;*/
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 81%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  gap: 20px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.grid__card {
+  max-width: 100px;
+  height: auto;
+  background: hsl(263deg, 55%, 52%);
+  border: 1px solid black;
+  font-size: 0.8125rem;
+}/*# sourceMappingURL=styles.css.map */

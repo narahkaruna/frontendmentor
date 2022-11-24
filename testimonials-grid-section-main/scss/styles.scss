@@ -1,0 +1,119 @@
+@import './boilerplate';
+@import './config';
+
+body {
+    background-color: $neutral-clr-dark;
+ }
+
+ .grid {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto;
+   gap: 20px;
+   font-family: $font-primary;
+   margin-top: 20%;
+ }
+
+ .grid__card {
+   max-width: 21.09375rem;
+   height: auto;
+   margin-inline: auto;  
+   font-size: $fs-p;
+   font-family: $font-primary;
+   color: $primary-clr;
+   padding: $spacer-md;
+   border-radius: $br;
+   background: $text-color;
+
+   & .grid__card-emphasis {
+    padding: $spacer 0;
+    font-weight: $fw-semi-bold;
+   }
+
+   & .grid__card-review {
+    opacity: 0.7;
+   }
+ }
+
+ .grid__card-profile {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: auto;
+
+    & .card-profile__img {
+      grid-row: 1/3;
+      & img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }     
+    }
+
+    & .card-profile__name {
+      font-weight: $fw-semi-bold;
+    }
+    & .card-profile__verified {
+      opacity: 0.5;
+    }
+ }
+
+ .card__profile--daniel {
+  background-color: $primary-clr-violet;
+  color: $text-color;
+  position: relative;
+
+  /*& .card-profile__img {
+
+    &::after {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      content: '';
+      background-image: url("../images/bg-pattern-quotation.svg");
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-color: hsla(263, 85%, 72%, 0.7);
+      top: 0;
+      right: 0;
+      z-index: 99;
+    }
+ }*/
+
+    & img {
+      border: 2.5px solid hsla(263, 85%, 72%, 0.7);
+    }
+  }
+
+  .card__profile--jonathan {
+    background-color: $primary-clr;
+    color: $text-color;
+  }
+
+  .card__profile--patrick {
+    background-color: $primary-clr-dark;
+    color: $text-color;
+
+    & img {
+      border: 2.5px solid hsla(263, 85%, 72%, 0.7);
+    }
+   }
+
+  .attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .attribution a { 
+      color: hsl(228, 45%, 44%); 
+  }
+
+   @import './responsive';
+
+ 
+
+
+ 
+
+
+
+
