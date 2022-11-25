@@ -59,29 +59,17 @@ body {
 
  .card__profile--daniel {
   background-color: $primary-clr-violet;
+  background-image: url("/testimonials-grid-section-main/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 1.25rem;
   color: $text-color;
-  position: relative;
 
-  /*& .card-profile__img {
-
-    &::after {
-      width: 150px;
-      height: 150px;
-      position: absolute;
-      content: '';
-      background-image: url("../images/bg-pattern-quotation.svg");
-      background-repeat: no-repeat;
-      background-position: top right;
-      background-color: hsla(263, 85%, 72%, 0.7);
-      top: 0;
-      right: 0;
-      z-index: 99;
+    & .card-profile__img {
+      & img {
+        border: 2.5px solid hsla(263, 85%, 72%, 0.7);
+      }
     }
- }*/
 
-    & img {
-      border: 2.5px solid hsla(263, 85%, 72%, 0.7);
-    }
   }
 
   .card__profile--jonathan {
