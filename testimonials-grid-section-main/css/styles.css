@@ -81,7 +81,7 @@ body {
 
 .card__profile--daniel {
   background-color: hsl(263deg, 55%, 52%);
-  background-image: url("/testimonials-grid-section-main/images/bg-pattern-quotation.svg");
+  background-image: url("../images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: top right 1.25rem;
   color: hsl(0deg, 0%, 100%);
@@ -119,6 +119,7 @@ body {
     grid-template-rows: repeat(2, auto);
     max-width: 60.6875rem;
     margin-inline: auto;
+    gap: 1.875rem;
   }
   .grid__card {
     max-width: 35rem;
@@ -135,4 +136,6 @@ body {
   .card__profile--patrick {
     grid-column: 2/4;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
