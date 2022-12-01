@@ -1,0 +1,168 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  /*font-size: 62.95%;*/
+  display: flex;
+  flex-direction: column;
+}
+
+picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+nav ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 3rem 0 3rem;
+}
+
+.logo img {
+  max-width: 80%;
+}
+
+main {
+  margin-inline: auto;
+  padding: 1.5rem;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.nav-btn--close {
+  display: none;
+}
+
+.navigation {
+  width: 325px;
+  height: 300px;
+  background: #fff;
+  box-shadow: 1px 0 1px 2px hsl(207deg, 33%, 95%);
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  top: 100px;
+  z-index: 222;
+  color: hsl(230deg, 11%, 40%);
+  display: none;
+}
+.navigation__item {
+  margin-top: 2rem;
+}
+.navigation__item:visited {
+  text-decoration: none;
+}
+
+.navigation__item:nth-child(4) {
+  border-top: 2px solid hsl(207deg, 33%, 95%);
+  padding-top: 1rem;
+  color: hsl(231deg, 7%, 65%);
+}
+
+.intro__left img {
+  max-width: 147%;
+  margin: 2rem 0 7rem 0;
+  position: relative;
+}
+.intro__left::before {
+  width: 50%;
+  height: 32%;
+  background: hsl(207deg, 33%, 95%);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 0 0 70px;
+  z-index: -1;
+}
+
+.intro__right small {
+  text-transform: uppercase;
+  color: hsl(231deg, 7%, 65%);
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+}
+.intro__right--dark {
+  width: 10px;
+  height: 10px;
+  background: hsl(230deg, 29%, 20%);
+  border-radius: 15px;
+  padding: 0.3rem 0.5rem;
+  margin-right: 0.875rem;
+  color: hsl(207deg, 33%, 95%);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.tracking-intro__title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  padding-top: 2rem;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  color: hsl(230deg, 29%, 20%);
+  line-height: 1.1;
+}
+.tracking-intro__content {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding: 1rem 0 2rem;
+}
+.tracking-intro__btns {
+  display: flex;
+}
+.tracking-intro__btns button {
+  padding: 0.75rem 1.5rem;
+  background: hsl(0deg, 100%, 68%);
+  border: none;
+  text-transform: uppercase;
+  color: hsl(207deg, 33%, 95%);
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+.tracking-intro__btns p {
+  padding: 0 1.5rem;
+  align-self: center;
+  text-transform: uppercase;
+  color: hsl(231deg, 7%, 65%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=styles.map */

@@ -1,0 +1,240 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+nav ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 3rem 2rem 2rem;
+}
+header::before {
+  width: 50%;
+  height: 50%;
+  background: hsl(207deg, 33%, 95%);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 0 0 70px;
+  z-index: -1;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.nav-btn {
+  justify-self: end;
+  align-self: center;
+}
+.nav-btn.active::after {
+  content: url("../images/icon-close.svg");
+}
+
+.navigation {
+  max-width: 375px;
+  min-height: 220px;
+  background: #fff;
+  box-shadow: 1px 0 1px 2px hsl(207deg, 33%, 95%);
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-inline: auto;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  top: 120px;
+  z-index: 222;
+  color: hsl(230deg, 11%, 40%);
+  display: none;
+}
+.navigation.active {
+  display: block;
+}
+.navigation__item {
+  margin-top: 1.5rem;
+}
+.navigation__item a {
+  text-decoration: none;
+  color: hsl(230deg, 11%, 40%);
+}
+.navigation__item a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.navigation__item:nth-child(4) {
+  border-top: 2px solid hsl(207deg, 33%, 95%);
+  padding-top: 1rem;
+}
+.navigation__item:nth-child(4) a {
+  color: hsl(231deg, 7%, 65%);
+}
+
+main {
+  padding: 1.5rem 0;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-inline: auto;
+}
+
+.tracking-intro__title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  padding-top: 2rem;
+  font-size: 1.7em;
+  color: hsl(230deg, 29%, 20%);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.tracking-intro__content {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding: 1rem 0 2rem;
+}
+.tracking-intro__btns {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.tracking-intro__btns button {
+  background: hsl(0deg, 100%, 68%);
+  border: none;
+  font-family: inherit;
+  text-transform: inherit;
+  font-size: 12px;
+  color: hsl(207deg, 33%, 95%);
+  border-radius: 7px;
+  font-weight: 700;
+  padding: 0.625rem 1rem;
+}
+.tracking-intro__btns button:hover {
+  cursor: pointer;
+  background-color: hsl(0deg, 100%, 68%);
+  opacity: 0.7;
+}
+.tracking-intro__btns p {
+  color: hsl(231deg, 7%, 65%);
+  margin-left: 15px;
+  align-self: center;
+}
+
+.intro__left {
+  width: 23.4375rem;
+  height: 320px;
+  overflow: hidden;
+  padding: 0;
+}
+.intro__left img {
+  margin: 1.4rem 0 0 0.8rem;
+  width: 500px;
+}
+
+.intro__right {
+  padding: 1.5rem;
+}
+.intro__right small {
+  color: hsl(231deg, 7%, 65%);
+  font-size: 0.75em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.intro__right--dark {
+  width: 10px;
+  height: 10px;
+  background: hsl(230deg, 29%, 20%);
+  border-radius: 15px;
+  padding: 0.2rem 0.4rem;
+  margin-right: 10px;
+  color: hsl(207deg, 33%, 95%);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media (min-width: 48rem) {
+  header::before {
+    height: 32%;
+    border-radius: 0 0 0 40px;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .navigation {
+    display: block;
+    box-shadow: none;
+    background-color: transparent;
+    position: inherit;
+    font-size: 0.75rem;
+    min-height: 2.5rem;
+  }
+  .navigation__item {
+    display: inline;
+    margin-left: 1rem;
+  }
+  .navigation__item:nth-child(4) {
+    border-top: none;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .intro__left {
+    order: 1;
+    width: 50%;
+  }
+  .intro__left img {
+    margin: 1.4rem 0 0 0.5rem;
+    width: 560px;
+  }
+  .intro__right {
+    width: 50%;
+    padding-left: 3rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

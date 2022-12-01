@@ -1,0 +1,52 @@
+@include media-768 {
+    header {
+        
+        &::before {
+            height: 32%;
+            border-radius: 0 0 0 40px;
+        }
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        box-shadow: none;
+        background-color: transparent;
+        position: inherit;
+        font-size: 0.75rem;
+        min-height: 2.5rem;
+
+        &__item {
+            display: inline;
+            margin-left: 1rem;
+        }
+    }
+
+    .navigation__item:nth-child(4) {
+        border-top: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .intro__left {
+        order: 1;
+        width: 50%;
+
+        & img {
+            margin: 1.4rem 0 0 0.5rem;
+            width: 560px;
+        }
+    }
+
+    .intro__right {
+        width: 50%;
+        padding-left: $spacer-lg;
+    }
+}

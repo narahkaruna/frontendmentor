@@ -1,0 +1,31 @@
+$colors: (
+    primary-red: hsl(0, 100%, 68%),
+    grayish-blue: hsl(231, 7%, 65%),
+    grayish-blue-light: hsl(207, 33%, 95%),
+    grayish-blue-dark: hsl(230, 11%, 40%),
+    dark-blue: hsl(230, 29%, 20%),
+);
+
+$ff-primary: 'Barlow Condensed', sans-serif;
+$ff-body: 'Barlow', sans-serif;
+
+$fs-p: 1.125rem;
+
+$fw-400: 400;
+$fw-700: 700;
+
+$spacer: 1rem;
+$spacer-md: calc($spacer * 2);
+$spacer-lg: calc($spacer * 3);
+
+$br: 7px;
+
+@function getColor($color){
+    @return map-get($map: $colors, $key: $color);
+}
+
+@mixin media-768 {
+    @media (min-width: 48rem){
+        @content;
+    }
+}
