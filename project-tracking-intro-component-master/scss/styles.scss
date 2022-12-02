@@ -5,19 +5,6 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: $spacer-lg $spacer-md $spacer-md;
-
-    &::before {
-        width: 50%;
-        height: 50%;
-        background: getColor(grayish-blue-light);
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 0 0 0 70px;
-        z-index: -1;
-    }
 }
 
 .logo img {
@@ -144,7 +131,20 @@ main {
 
     img {  
     margin: 1.4rem 0 0 0.8rem;
-    width: 500px;
+    width: min(20rem, 31.25rem);
+    }
+
+    &::before {
+        width: 50%;
+        height: 50%;
+        background: getColor(grayish-blue-light);
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0 0 0 70px;
+        z-index: -1;
     }
 }
 

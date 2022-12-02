@@ -14,7 +14,6 @@ html {
 
 body {
   line-height: 1.4;
-  -webkit-font-smoothing: antialiased;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,18 +33,6 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 3rem 2rem 2rem;
-}
-header::before {
-  width: 50%;
-  height: 50%;
-  background: hsl(207deg, 33%, 95%);
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 0 0 0 70px;
-  z-index: -1;
 }
 
 .logo img {
@@ -161,7 +148,19 @@ main {
 }
 .intro__left img {
   margin: 1.4rem 0 0 0.8rem;
-  width: 500px;
+  width: 20rem;
+}
+.intro__left::before {
+  width: 50%;
+  height: 50%;
+  background: hsl(207deg, 33%, 95%);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 0 0 70px;
+  z-index: -1;
 }
 
 .intro__right {
